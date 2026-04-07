@@ -128,7 +128,7 @@ export default function Section03() {
           <div className="flex justify-center w-full py-3"><ArrowDown /></div>
 
           {/* AI scoring — mobile */}
-          <span style={{ ...labelStyle, marginBottom: 8 }}>AI Scoring</span>
+          <span style={{ ...labelStyle, marginBottom: 8 }}>Solar Scaler AI</span>
           <div style={{ background: '#fff', border: '1.5px solid rgba(74,189,232,0.35)', borderRadius: 12, padding: '14px 16px', boxShadow: '0 2px 12px rgba(74,189,232,0.1)', width: '100%', display: 'flex', alignItems: 'center', gap: 16 }}>
             <div style={{ width: 48, height: 48, borderRadius: '50%', background: 'linear-gradient(135deg, #0c1d2e 0%, #0f2640 100%)', border: '1.5px solid rgba(74,189,232,0.5)', boxShadow: '0 4px 16px rgba(74,189,232,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
               <span style={{ fontFamily: 'var(--font-mono)', fontWeight: 800, color: 'white', fontSize: 7, letterSpacing: '0.04em' }}>SS</span>
@@ -217,7 +217,7 @@ export default function Section03() {
 
               {/* Col 2: AI scoring */}
               <div style={{ flexShrink: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
-                <span style={labelStyle}>AI Scoring</span>
+                <span style={labelStyle}>Solar Scaler AI</span>
                 <div style={{ background: '#fff', border: '1.5px solid rgba(74,189,232,0.35)', borderRadius: 12, padding: '14px 16px', boxShadow: '0 2px 12px rgba(74,189,232,0.1)', width: 145, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
                   <div style={{ width: 52, height: 52, borderRadius: '50%', background: 'linear-gradient(135deg, #0c1d2e 0%, #0f2640 100%)', border: '1.5px solid rgba(74,189,232,0.5)', boxShadow: '0 4px 16px rgba(74,189,232,0.3), inset 0 1px 0 rgba(255,255,255,0.07)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <span style={{ fontFamily: 'var(--font-mono)', fontWeight: 800, color: 'white', fontSize: 7, letterSpacing: '0.04em' }}>SS</span>
