@@ -224,7 +224,6 @@ export default function ApplyForm() {
               <div className="flex flex-col gap-5">
                 <div>
                   <h2 className="text-xl font-bold text-[var(--tx)] tracking-tight mb-1">How can we reach you?</h2>
-                  <p className="text-sm text-[var(--tx3)]">We&apos;ll only contact you about your application.</p>
                 </div>
                 <div className="flex flex-col gap-1.5">
                   <label htmlFor="email" className="text-xs font-semibold text-[var(--tx2)] uppercase tracking-[0.08em]">Email</label>
@@ -239,7 +238,7 @@ export default function ApplyForm() {
                   />
                 </div>
                 <div className="flex flex-col gap-1.5">
-                  <label htmlFor="phone" className="text-xs font-semibold text-[var(--tx2)] uppercase tracking-[0.08em]">Phone</label>
+                  <label htmlFor="phone" className="text-xs font-semibold text-[var(--tx2)] uppercase tracking-[0.08em]">Best number to call you on</label>
                   <input
                     id="phone"
                     type="tel"
@@ -248,6 +247,10 @@ export default function ApplyForm() {
                     placeholder="07700 900000"
                     className={inputClass}
                   />
+                  <div className="mt-3 rounded-xl bg-[rgba(74,189,232,0.08)] border border-[rgba(74,189,232,0.2)] px-4 py-3 flex items-start gap-3">
+                    <span className="text-lg leading-none mt-0.5">📞</span>
+                    <p className="text-sm text-[var(--sky-d)] font-medium leading-snug">We aim to call you same-day.<br />Double-check your number.</p>
+                  </div>
                 </div>
               </div>
             )}
