@@ -22,7 +22,7 @@ type FormData = {
   'sales-team': string
   accreditations: string[]
   'lead-sources': string[]
-  challenge: string
+  challenge: string[]
 }
 
 function OptionCard({ label, selected, onSelect }: { label: string; selected: boolean; onSelect: () => void }) {
@@ -80,7 +80,7 @@ export default function ApplyForm() {
     'sales-team': '',
     accreditations: [],
     'lead-sources': [],
-    challenge: '',
+    challenge: [],
   })
   const containerRef = useRef<HTMLDivElement>(null)
 
@@ -103,7 +103,7 @@ export default function ApplyForm() {
       case 5: return data.revenue !== '' && data['sales-team'] !== ''
       case 6: return data.accreditations.length > 0
       case 7: return data['lead-sources'].length > 0
-      case 8: return data.challenge !== ''
+      case 8: return data.challenge.length > 0
       default: return false
     }
   }
@@ -132,12 +132,12 @@ export default function ApplyForm() {
     formData.append('sales-team', data['sales-team'])
     data.accreditations.forEach(v => formData.append('accreditations', v))
     data['lead-sources'].forEach(v => formData.append('lead-sources', v))
-    formData.append('challenge', data.challenge)
+    data.challenge.forEach(v => formData.append('challenge', v))
 
     handleFormspreeSubmit(formData)
   }
 
-  const toggleArray = (field: 'accreditations' | 'lead-sources', value: string) => {
+  const toggleArray = (field: 'accreditations' | 'lead-sources' | 'challenge', value: string) => {
     setData(prev => {
       const arr = prev[field]
       return {
@@ -410,21 +410,21 @@ export default function ApplyForm() {
               <div className="flex flex-col gap-5">
                 <div>
                   <h2 className="text-xl font-bold text-[var(--tx)] tracking-tight mb-1">What&apos;s stopping you from growing?</h2>
-                  <p className="text-sm text-[var(--tx3)]">Pick the biggest one.</p>
+                  <p className="text-sm text-[var(--tx3)]">Select all that apply.</p>
                 </div>
                 <div className="flex flex-col gap-2.5">
                   {[
-                    { value: 'not-enough-leads', label: 'Not enough leads' },
-                    { value: 'leads-too-expensive', label: 'Leads cost too much' },
-                    { value: 'cant-close', label: 'Can\'t close enough of them' },
-                    { value: 'too-much-admin', label: 'Too much admin / chasing' },
-                    { value: 'install-capacity', label: 'Need more install capacity' },
-                  ].map(({ value, label }) => (
-                    <OptionCard
-                      key={value}
+                    { id: 'not-enough-leads', label: 'Not enough leads' },
+                    { id: 'leads-too-expensive', label: 'Leads cost too much' },
+                    { id: 'cant-close', label: 'Can\'t close enough of them' },
+                    { id: 'too-much-admin', label: 'Too much admin / chasing' },
+                    { id: 'install-capacity', label: 'Need more install capacity' },
+                  ].map(({ id, label }) => (
+                    <CheckCard
+                      key={id}
                       label={label}
-                      selected={data.challenge === value}
-                      onSelect={() => setData(d => ({ ...d, challenge: value }))}
+                      checked={data.challenge.includes(id)}
+                      onChange={() => toggleArray('challenge', id)}
                     />
                   ))}
                 </div>

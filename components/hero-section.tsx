@@ -177,8 +177,7 @@ export default function HeroSection() {
 
         {/* CTA */}
         <a
-          href="#apply"
-          onClick={(e) => { e.preventDefault(); document.getElementById('apply-btn')?.scrollIntoView({ behavior: 'smooth', block: 'end' }) }}
+          href="/solar-scaler/apply"
           className="inline-flex items-center gap-3 tracking-wide px-5 md:px-10 py-[20px] rounded-full hover:opacity-90 transition-opacity shadow-lg w-full justify-center mb-5"
           style={{ background: '#ffffff', color: '#0f2337', fontWeight: 700, fontSize: 'clamp(16px, 1.2vw, 17px)' }}
         >
