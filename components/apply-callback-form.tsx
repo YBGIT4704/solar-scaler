@@ -57,7 +57,7 @@ export default function ApplyCallbackForm() {
 
         {/* Photo */}
         <div
-          className="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden mb-4"
+          className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden mb-5"
           style={{ boxShadow: '0 0 0 4px rgba(58,184,112,0.3), 0 0 24px rgba(58,184,112,0.15)' }}
         >
           <Image
@@ -71,10 +71,10 @@ export default function ApplyCallbackForm() {
         </div>
 
         {/* Headline */}
-        <h2 className="text-[28px] md:text-[38px] font-bold text-[var(--tx)] tracking-tight mb-3">
+        <h2 className="text-[34px] md:text-[44px] font-bold text-[var(--tx)] tracking-tight mb-3">
           You&apos;re all set
           <span className="inline-block ml-2 text-[var(--grn)]">
-            <svg width="26" height="26" viewBox="0 0 20 20" fill="none" className="inline -mt-1 md:w-[34px] md:h-[34px]">
+            <svg width="32" height="32" viewBox="0 0 20 20" fill="none" className="inline -mt-1.5 md:w-[40px] md:h-[40px]">
               <circle cx="10" cy="10" r="10" fill="currentColor"/>
               <path d="M6 10l3 3L14 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
@@ -82,10 +82,10 @@ export default function ApplyCallbackForm() {
         </h2>
 
         {/* Copy */}
-        <p className="text-[var(--tx)] text-[17px] md:text-[20px] leading-snug">
+        <p className="text-[var(--tx)] text-[19px] md:text-[22px] leading-snug">
           <strong>Matt</strong> has been assigned to your account.
         </p>
-        <p className="text-[var(--tx2)] text-[17px] md:text-[20px] leading-snug mt-1.5">
+        <p className="text-[var(--tx2)] text-[19px] md:text-[22px] leading-snug mt-1.5">
           Expect a call soon at your preferred time.
         </p>
 
