@@ -83,7 +83,7 @@ export default function ApplyCallbackForm() {
 
         {/* Copy */}
         <p className="text-[var(--tx)] text-[19px] md:text-[22px] leading-snug">
-          <strong>Matt</strong> has been assigned to your account.
+          <strong>Matt</strong> has been assigned to you.
         </p>
         <p className="text-[var(--tx2)] text-[19px] md:text-[22px] leading-snug mt-1.5">
           Expect a call soon at your preferred time.
